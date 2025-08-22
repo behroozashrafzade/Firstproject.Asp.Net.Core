@@ -15,6 +15,7 @@ namespace Firstproject.Asp.Net.Core.Controllers
         [HttpGet]
         public IActionResult Index()
         {
+            ViewBag.time= DateTime.Now.ToString("hh:mm");
             return View();
         }
 
