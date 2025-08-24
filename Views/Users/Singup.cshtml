@@ -2,32 +2,34 @@
     ViewData["Title"] = "User Signup";
 }
 
-<div class="row justify-content-center align-items-center" style="min-height: 80vh;">
-    <div class="col-md-6 col-lg-4">
-        <div class="card shadow-lg border-0 rounded-4">
-            <div class="card-body p-4">
-                <h2 class="text-center mb-4 text-primary">Create Account</h2>
-                <form method="post" asp-controller="Users" asp-action="Singup">
-                    <div class="mb-3">
-                        <label for="UserName" class="form-label">Username</label>
-                        <input type="text" class="form-control" id="UserName" name="UserName" required autocomplete="off" />
+<div class="container mt-5">
+    <div class="d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+        <div class="col-md-6 col-lg-5">
+            <div class="card shadow-sm border-0 rounded-4">
+                <div class="card-body p-4">
+                    <h2 class="text-center mb-4 text-primary">Create Account</h2>
+                    <form method="post" asp-controller="Users" asp-action="Singup">
+                        <div class="mb-3">
+                            <label for="UserName" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="UserName" name="UserName" required autocomplete="off" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="Email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="Email" name="Email" required autocomplete="off" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="Password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="Password" name="Password" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="ConfirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="ConfirmPassword" name="ConfirmPassword" required />
+                        </div>
+                        <button type="submit" class="btn btn-success w-100 mt-2 shadow-sm">Sign Up</button>
+                    </form>
+                    <div class="text-center mt-3">
+                        <small>Already have an account? <a href="/Login/Index">Login here</a></small>
                     </div>
-                    <div class="mb-3">
-                        <label for="Email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="Email" name="Email" required autocomplete="off" />
-                    </div>
-                    <div class="mb-3">
-                        <label for="Password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="Password" name="Password" required />
-                    </div>
-                    <div class="mb-3">
-                        <label for="ConfirmPassword" class="form-label">Confirm Password</label>
-                        <input type="password" class="form-control" id="ConfirmPassword" name="ConfirmPassword" required />
-                    </div>
-                    <button type="submit" class="btn btn-primary w-100 mt-2">Sign Up</button>
-                </form>
-                <div class="text-center mt-3">
-                    <small>Already have an account? <a href="/Login/Index">Login here</a></small>
                 </div>
             </div>
         </div>
