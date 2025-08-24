@@ -25,5 +25,29 @@ namespace Firstproject.Asp.Net.Core.Controllers
 
             return View(products);
         }
+
+        public IActionResult Delete()
+        {
+            return View();
+        }
+
+        // Additional actions like Create, Edit, Details can be added here
+
+         public IActionResult Details()
+        {
+            return View();
+        }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        public IActionResult Edit()
+        {
+            return View();
+        }
+
+
     }
 }
