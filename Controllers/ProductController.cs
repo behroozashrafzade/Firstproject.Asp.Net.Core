@@ -5,13 +5,25 @@ namespace Firstproject.Asp.Net.Core.Controllers
 {
     public class ProductController : Controller
     {
+        Product MyProduct = new Product();
+
+         List<Product> products = new List<Product>();
+        public ProductController()
+        {
+            MyProduct.ProductId=Guid.NewGuid();
+            MyProduct.ProductName="Laptop";
+            MyProduct.ProductDescription="This is a high-performance laptop suitable for all your computing needs.";
+            MyProduct.ProductPrice=999.99M;
+
+            products.Add(MyProduct);
+        }
 
 
         public IActionResult ShowProduct()
         {
 
 
-            return View();
+            return View(products);
         }
     }
 }
