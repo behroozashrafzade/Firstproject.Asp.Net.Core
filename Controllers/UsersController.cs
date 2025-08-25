@@ -9,6 +9,14 @@ namespace Firstproject.Asp.Net.Core.Controllers
             return View();
         }
 
+
+        public IActionResult UsersList()
+        {
+            return View();
+
+        }
+
+
         public IActionResult Singup()
         {
             return View();
@@ -27,6 +35,23 @@ namespace Firstproject.Asp.Net.Core.Controllers
             return View();
         }
 
+        public IActionResult Logout() 
+        {
         
+            return View();
+        }
+
+        public IActionResult DeleteAccount() 
+        {
+            return View();
+        }
+
+        public IActionResult CreateAccount() 
+            {
+                return View();
+            }
+
+        
+
     }
 }
