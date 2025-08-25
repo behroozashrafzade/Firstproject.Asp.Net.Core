@@ -5,9 +5,9 @@ namespace Firstproject.Asp.Net.Core.Controllers
 {
     public class AdminController : Controller
     {
-        User myUser = new User();
+        Admin myUser = new Admin();
 
-        List<User> users = new List<User>();
+        List<Admin> Admins = new List<Admin>();
 
 
 
@@ -23,46 +23,46 @@ namespace Firstproject.Asp.Net.Core.Controllers
 
         public IActionResult UserList()
         {
-            users.Add(
-             new User
+            Admins.Add(
+             new Admin
              {
-                 UserId = Guid.NewGuid(),
-                 UserName = "11111111111",
-                 UserPassword = "1111111111",
-                 UserEmail = "111111",
-                 UserPhone = "11111"
+                 AdminId = Guid.NewGuid(),
+                 AdminUserName = "11111111111",
+                 AdminPassword = "1111111111",
+                 AdminEmail = "111111",
+                 AdminPhone = "11111"
              });
 
-            users.Add(
-             new User
+            Admins.Add(
+             new Admin
              {
-                 UserId = Guid.NewGuid(),
-                 UserName = "222222222222",
-                 UserPassword = "22222222222",
-                 UserEmail = "2222",
-                 UserPhone = "2222"
+                 AdminId = Guid.NewGuid(),
+                 AdminUserName = "222222222222",
+                 AdminPassword = "22222222222",
+                 AdminEmail = "2222",
+                 AdminPhone = "2222"
              });
 
 
-            users.Add(
-            new User
+            Admins.Add(
+            new Admin
             {
-                UserId = Guid.NewGuid(),
-                UserName = "3333333",
-                UserPassword = "333333",
-                UserEmail = "33333",
-                UserPhone = "33333"
+                AdminId = Guid.NewGuid(),
+                AdminUserName = "3333333",
+                AdminPassword = "333333",
+                AdminEmail = "33333",
+                AdminPhone = "33333"
             });
 
 
-            return View(users);
+            return View(Admins);
         }
 
 
 
         public IActionResult Details(Guid id)
         {
-            User? temp=users.Find(a=>a.UserId==id);
+            Admin? temp= Admins.Find(a=>a.AdminId== id);
 
 
             return View(temp);
