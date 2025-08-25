@@ -16,7 +16,17 @@ namespace Firstproject.Asp.Net.Core.Controllers
             MyProduct.ProductPrice=999.99M;
 
             products.Add(MyProduct);
+            products.Add(new Product()
+            {
+                ProductId = Guid.NewGuid(),
+                ProductName = "Smartphone",
+                ProductDescription = "A latest model smartphone with cutting-edge features and sleek design.",
+                ProductPrice = 799.99M
+            });
         }
+        
+
+
 
 
         public IActionResult ShowProduct()
