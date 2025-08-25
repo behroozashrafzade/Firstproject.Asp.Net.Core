@@ -27,20 +27,20 @@ namespace Firstproject.Asp.Net.Core.Controllers
              new Admin
              {
                  AdminId = Guid.NewGuid(),
-                 AdminUserName = "11111111111",
-                 AdminPassword = "1111111111",
-                 AdminEmail = "111111",
-                 AdminPhone = "11111"
+                 AdminUserName = "admin1",
+                 AdminPassword = "admin1",
+                 AdminEmail = "admin1",
+                 AdminPhone = "admin1"
              });
 
             Admins.Add(
              new Admin
              {
                  AdminId = Guid.NewGuid(),
-                 AdminUserName = "222222222222",
-                 AdminPassword = "22222222222",
-                 AdminEmail = "2222",
-                 AdminPhone = "2222"
+                 AdminUserName = "admin2",
+                 AdminPassword = "admin2",
+                 AdminEmail = "admin2",
+                 AdminPhone = "admin2"
              });
 
 
@@ -48,10 +48,10 @@ namespace Firstproject.Asp.Net.Core.Controllers
             new Admin
             {
                 AdminId = Guid.NewGuid(),
-                AdminUserName = "3333333",
-                AdminPassword = "333333",
-                AdminEmail = "33333",
-                AdminPhone = "33333"
+                AdminUserName = "admin3",
+                AdminPassword = "admin3",
+                AdminEmail = "admin3",
+                AdminPhone = "admin3"
             });
 
 
