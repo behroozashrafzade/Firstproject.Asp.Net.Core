@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Firstproject.Asp.Net.Core.Models.Admin>
+
+@{
+    ViewData["Title"] = "AdminList";
+}
+
+<h1>UserList</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table" style="background:red; padding:5px; margin:10px;">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AdminId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AdminUserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AdminPassword)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AdminEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AdminPhone)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                    @Html.DisplayFor(modelItem => item.AdminId)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.AdminUserName)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.AdminPassword)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.AdminEmail)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.AdminPhone)
+            </td>
+            <td>
+                    @Html.ActionLink("Update", "Update", new {  id=item.AdminId  }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.AdminId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.AdminId })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

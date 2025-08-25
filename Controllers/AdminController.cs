@@ -21,7 +21,7 @@ namespace Firstproject.Asp.Net.Core.Controllers
             return View();
         }
 
-        public IActionResult UserList()
+        public IActionResult AdminList()
         {
             Admins.Add(
              new Admin
