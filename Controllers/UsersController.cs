@@ -1,11 +1,13 @@
 ﻿using Firstproject.Asp.Net.Core.Models;
+using Firstproject.Asp.Net.Core.Models.Dto;
 using Microsoft.AspNetCore.Mvc;
-
+using Microsoft.DotNet.Scaffolding.Shared.Project;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
 namespace Firstproject.Asp.Net.Core.Controllers
 {
     public class UsersController : Controller
     {
-        User myUser = new User();
+       // User myUser = new User();
 
         List<User> myUsers = new List<User>();
 
@@ -46,18 +48,46 @@ namespace Firstproject.Asp.Net.Core.Controllers
         {
             return View();
         }
-
+        
 
         public IActionResult UsersList()
         {
             return View(myUsers);
 
         }
-
-
+        [HttpGet]
         public IActionResult Singup()
         {
             return View();
+        }
+        [HttpPost]
+        public IActionResult Singup(CreateUser ? CreateUsertemp)
+        {
+            if(ModelState.IsValid)
+            {
+                 User usertemp =  new User()
+                 {
+                     
+
+                    UserId = Guid.NewGuid(),
+                    UserName = CreateUsertemp.UserName,
+                    UserPassword = CreateUsertemp.UserPassword,
+                    UserEmail = CreateUsertemp.UserEmail,
+                    UserPhone = CreateUsertemp.UserPhone
+
+
+
+                
+                 };
+
+                myUsers.Add(usertemp);
+                return RedirectToAction("Login");
+            }
+            else
+            {
+                return View();
+            }
+            
         }
         public IActionResult Login()
         {
